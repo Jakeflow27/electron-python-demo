@@ -1,0 +1,30 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "Demo app with python and electron",
+  "productName": "Electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./main",
+    "package": "npm run build-main && npm run build-installer",
+    "clean": "rm -rf ./release-builds",
+    "build-installer": "node build-installer.js",
+    "build-main": "electron-packager . demo --overwrite --asar=false --platform=win32 --arch=ia32 --icon=assets/icons/win/app.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron App\""
+  },
+  "keywords": [
+    "Electron",
+    "Python"
+  ],
+  "author": "jacob.reiter@sosi.com",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^1.8.8",
+    "electron-packager": "^14.1.1",
+    "electron-winstaller": "^4.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "jquery": "^3.4.1",
+    "python-shell": "^1.0.8"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Python and Electron</title>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="javascript"></script>
+    <!-- <script src="node_modules/jquery/dist/jquery.min.js" type="javascript"></script> -->
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  </head>
+  <body>
+
+      <div class="container">
+
+        <header class="masthead mb-auto">
+          <h2> HTML/CSS UI with python and node backend</h2>
+        </header>
+  
+        <main role="main" class="inner cover" style="padding-top:2em">
+          
+          <h3 class="cover-heading">Choose an action</h3>
+          <button id="dev-tools" type="button" class="btn btn-outline-primary">Toggle dev tools</button>
+          <button id="file-down" type="button" class="btn btn-primary">View a file</button>
+          <button id="file-up" type="button" class="btn btn-secondary">Send xml to python</button>
+          <button id="text" type="button" class="btn btn-success">Text from python</button>
+
+          <br/>
+          <br/>
+
+          <h3 class="cover-heading">Run inline code</h3>
+          <form id="example-template-form">
+            <div class="input-group" style="margin: 1em;">
+              <input id="inline" type="text" class="form-control" placeholder="run inline python code.. ie x=1+1;print(x)" />
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Run code..</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="text-info" style="margin:1em;padding:1em" id="result">
+            <!-- Response shows up here -->
+          </div>
+
+        </main>
+  
+        <footer class="mastfoot mt-auto">
+          <div class="inner">
+            <p> Using Node.js <script>document.write(process.versions.node)</script>,
+              Chromium <script>document.write(process.versions.chrome)</script>,
+              and Electron <script>document.write(process.versions.electron)</script>.</p>
+          </div>
+        </footer>
+
+  </body>
+
+  <script>
+    require('./renderer.js')
+  </script>
+</html>

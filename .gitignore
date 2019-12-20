@@ -1,0 +1,6 @@
+node_modules/
+build/
+dist/
+Squirrel.exe
+package-lock.json
+release-builds/
