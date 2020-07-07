@@ -18,7 +18,7 @@
   "author": "jacob.reiter@sosi.com",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^1.8.8",
+    "electron": "^9.1.0",
     "electron-packager": "^14.1.1",
     "electron-winstaller": "^4.0.0"
   },
